@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahak Saxena | About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: url('creative-geometric-design-space_53876-89787.avif') no-repeat center center fixed; /* Add your background image URL */
+            background-size: cover;
+            padding: 20px;
+            background-attachment: fixed; /* Keeps background fixed on scroll */
+        }
+
+        /* About Me Section Styling */
+        #about-me {
+            background: rgba(255, 255, 255, 0.979); /* Slightly transparent white background */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out forwards;
+            border-top: 5px solid #00796b; /* Accent line */
+        }
+
+        /* Heading Styling */
+        #about-me h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: #00796b;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        #about-me h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: #00796b;
+            border-radius: 2px;
+        }
+
+        /* Paragraph Styling */
+        #about-me p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #555;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* List Styling */
+        #about-me ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        #about-me ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 25px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        #about-me ul li::before {
+            content: "\f058";
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #00796b;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: 10px; /* Spacing between buttons */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            z-index: 1;
+        }
+
+        .btn:hover::after {
+            transform: scaleX(1);
+        }
+
+        .btn:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* YouTube Channel Section Styling */
+        .youtube-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Space between buttons */
+            margin-top: 20px;
+        }
+
+        .youtube-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            flex: 1 1 150px; /* Flex properties for responsiveness */
+        }
+
+        .youtube-links a:hover {
+            background-color: #c8102e;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .youtube-links i {
+            margin-right: 8px;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Mahak Saxena, a passionate Computer Science student currently pursuing a diploma in the field. With a strong foundation in programming and a keen interest in technology, I am committed to expanding my knowledge and skills.</p>
+        
+        <p>My expertise includes:</p>
+        <ul>
+            <li>Web Development: HTML, CSS, JavaScript, and various frameworks.</li>
+            <li>Software Engineering: Experience with different programming languages and development tools.</li>
+            <li>Problem-Solving: Ability to analyze problems and devise efficient solutions.</li>
+        </ul>
+        
+        <p>I have worked on several exciting projects, including:</p>
+        <ul>
+            <li>Developing a dynamic web application for managing user data.</li>
+            <li>Creating interactive websites with modern design principles.</li>
+        </ul>
+    
+        <p>My goal is to continue developing my skills and to contribute to innovative projects that make a positive impact. Outside of my studies, I enjoy exploring new technologies and participating in coding challenges.</p>
+        
+        <!-- YouTube Channel Section -->
+        <p>Check out my YouTube channels for more insights and tutorials:</p>
+        <div class="youtube-links">
+            <a href="https://www.youtube.com/@meowlearning0507" class="btn" target="_blank"><i class="fab fa-youtube"></i> 1st YouTube Channel</a>
+            <a href="https://www.youtube.com/@MahakSaxena-b6b" class="btn" target="_blank"><i class="fab fa-youtube"></i> 2nd YouTube Channel</a>
+        </div>
+    </section>
+</body>
+</html>

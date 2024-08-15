@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahak Saxena | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling with Background Image */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: url('images.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for header */
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #00796b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 200%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transform: translateX(-50%) rotate(2deg);
+            z-index: 0;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better readability */
+        }
+
+        header p {
+            font-size: 1.2em;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Main Content Styling */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* About Me Section */
+        #about-me {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+            position: relative;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #about-me h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00796b;
+            font-family: 'Playfair Display', serif;
+        }
+
+        #about-me p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            color: #555;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 5px solid #00796b;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p,
+            #about-me p {
+                font-size: 1em;
+            }
+
+            #about-me {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and get to know me better!</p>
+    </header>
+
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I'm Mahak Saxena, currently pursuing a diploma in Computer Science. I am passionate about technology and design, and this portfolio showcases some of my work and achievements.</p>
+            <a href="about.html" class="btn">About Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mahak Saxena. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
